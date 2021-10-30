@@ -15,6 +15,18 @@ function Home() {
     setData(updatedData);
   };
 
+  const isPreviusCompleted = (index) => {
+    if (index === 0) {
+      return false;
+    }
+
+    const isAllDone = data[index - 1].options.every((i) => {
+      return i.isDone;
+    });
+
+    return isAllDone ? false: true
+  };
+
   return (
     <div className="container bg bg-light rounded-3 mt-5 p-4">
       <Head>
@@ -29,6 +41,7 @@ function Home() {
               key={index}
               updateItem={updateItem}
               index={index}
+              isDisabled={isPreviusCompleted(index)}
             />
           );
         })}

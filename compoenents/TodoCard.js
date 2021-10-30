@@ -21,6 +21,7 @@ function TodoCard(props) {
               key={index}
               updateItem={props.updateItem}
               index={props.index}
+              isDisabled={props.isDisabled}
             />
           );
         })}

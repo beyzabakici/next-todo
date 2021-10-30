@@ -11,6 +11,7 @@ function TodoItem(props) {
         id={props.item.value}
         checked={props.item.isDone}
         onChange={onChange}
+        disabled={props.isDisabled}
       />
       <label className="form-check-label ms-2" htmlFor={props.item.value}>
         {props.item.value}
