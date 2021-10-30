@@ -1,10 +1,10 @@
-export default function TodoItem(props) {
+function TodoItem(props) {
   const onChange = (e) => {
     return props.updateItem(props.item, props.index, e.target.checked);
   };
 
   return (
-    <div className="mb-3">
+    <div className="mb-3 ms-4">
       <input
         className="form-check-input"
         type="checkbox"
@@ -18,3 +18,5 @@ export default function TodoItem(props) {
     </div>
   );
 }
+
+export default TodoItem;

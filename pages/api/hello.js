@@ -31,7 +31,7 @@ export const result = [
       {
         id: 0,
         value: "Create roadmap",
-        isDone: true,
+        isDone: false,
       },
       {
         id: 1,
